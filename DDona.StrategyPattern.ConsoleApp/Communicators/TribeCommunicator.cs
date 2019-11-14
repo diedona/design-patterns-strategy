@@ -19,6 +19,7 @@ namespace DDona.StrategyPattern.ConsoleApp.Communicators
 
             // enviar sinal...
             // new DispatchSmoke(tribeTo, personTo);
+            Console.WriteLine($"Enviando Sinal de Fumaça para {personTo} da tribo {tribeTo}");
             return true;
         }
     }

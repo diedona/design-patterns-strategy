@@ -20,6 +20,10 @@ namespace DDona.StrategyPattern.Domain.Entities
             Id = Guid.NewGuid();
             FullName = fullName;
             BirthDate = birthDate;
+            Email = email;
+            PhoneNumber = phoneNumber;
+            PreferredCommunication = communication;
+            Tribe = tribe;
 
             if (this.BirthDate > DateTime.Now)
             {

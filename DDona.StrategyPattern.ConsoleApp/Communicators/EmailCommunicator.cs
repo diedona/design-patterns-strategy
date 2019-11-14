@@ -20,6 +20,7 @@ namespace DDona.StrategyPattern.ConsoleApp.Communicators
 
             // enviar email...
             // new SendEmail(emailTo, title, description);
+            Console.WriteLine($"Enviando Email para {emailTo}");
             return true;
         }
     }

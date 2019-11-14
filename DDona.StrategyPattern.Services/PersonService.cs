@@ -14,10 +14,8 @@ namespace DDona.StrategyPattern.Services
         private IPersonCommunication _communicationStrategy;
         private IList<Person> _data;
 
-        public PersonService(ISortPerson sortStrategy, IPersonCommunication communicationStrategy)
+        public PersonService()
         {
-            _sortStrategy = sortStrategy;
-            _communicationStrategy = communicationStrategy;
             _data = GeneratePeople();
         }
 
@@ -33,6 +31,11 @@ namespace DDona.StrategyPattern.Services
 
         public IList<Person> GetPeople()
         {
+            if(_sortStrategy == null)
+            {
+                throw new Exception($"{nameof(_sortStrategy)} is not defined");
+            }
+
             return _sortStrategy.DoSort(_data);
         }
 

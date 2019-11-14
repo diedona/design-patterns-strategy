@@ -19,6 +19,7 @@ namespace DDona.StrategyPattern.ConsoleApp.Communicators
 
             // enviar SMS...
             // new SendSMS(phoneTo, description);
+            Console.WriteLine($"Enviando SMS para {phoneTo}");
             return true;
         }
     }

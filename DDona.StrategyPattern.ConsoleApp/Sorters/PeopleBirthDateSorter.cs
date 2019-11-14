@@ -8,11 +8,11 @@ using System.Text;
 
 namespace DDona.StrategyPattern.ConsoleApp.Sorters
 {
-    public class PeopleBirthDate : ISortPerson
+    public class PeopleBirthDateSorter : ISortPerson
     {
         private SortDirection _sortDirection;
 
-        public PeopleBirthDate(SortDirection direction)
+        public PeopleBirthDateSorter(SortDirection direction)
         {
             _sortDirection = direction;
         }
