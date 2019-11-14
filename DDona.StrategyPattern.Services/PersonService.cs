@@ -1,5 +1,6 @@
 ﻿using DDona.StrategyPattern.Domain.Entities;
 using DDona.StrategyPattern.Domain.Enum;
+using DDona.StrategyPattern.Domain.Interfaces.Communication;
 using DDona.StrategyPattern.Domain.Interfaces.Sort;
 using System;
 using System.Collections.Generic;
@@ -10,22 +11,34 @@ namespace DDona.StrategyPattern.Services
     public class PersonService
     {
         private ISortPerson _sortStrategy;
+        private IPersonCommunication _communicationStrategy;
         private IList<Person> _data;
 
-        public PersonService(ISortPerson sortStrategy)
+        public PersonService(ISortPerson sortStrategy, IPersonCommunication communicationStrategy)
         {
             _sortStrategy = sortStrategy;
+            _communicationStrategy = communicationStrategy;
             _data = GeneratePeople();
         }
 
-        public void SetStrategy(ISortPerson newSortStrategy)
+        public void SetSortStrategy(ISortPerson newSortStrategy)
         {
             _sortStrategy = newSortStrategy;
+        }
+
+        public void SetCommunicationStrategy(IPersonCommunication newCommunicationStrategy)
+        {
+            _communicationStrategy = newCommunicationStrategy;
         }
 
         public IList<Person> GetPeople()
         {
             return _sortStrategy.DoSort(_data);
+        }
+
+        public bool SendCommunication(Person person, Message message)
+        {
+            return _communicationStrategy.SendCommunication(person, message);
         }
 
         #region [ FAKE DATA FOR DEMO ]

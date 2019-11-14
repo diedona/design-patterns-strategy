@@ -7,6 +7,6 @@ namespace DDona.StrategyPattern.Domain.Interfaces.Communication
 {
     public interface IPersonCommunication
     {
-        bool SendCommunication(Person person);
+        bool SendCommunication(Person person, Message message);
     }
 }

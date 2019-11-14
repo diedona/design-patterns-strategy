@@ -1,4 +1,5 @@
-﻿using DDona.StrategyPattern.ConsoleApp.Sorters;
+﻿using DDona.StrategyPattern.ConsoleApp.Communicators;
+using DDona.StrategyPattern.ConsoleApp.Sorters;
 using DDona.StrategyPattern.Domain.Enum;
 using DDona.StrategyPattern.Services;
 using System;
@@ -9,7 +10,7 @@ namespace DDona.StrategyPattern.ConsoleApp
     {
         static void Main(string[] args)
         {
-            PersonService personService = new PersonService(new PeopleNameSorter(SortDirection.Asc));
+            PersonService personService = new PersonService(new PeopleNameSorter(SortDirection.Asc), new EmailCommunicator());
             foreach (var person in personService.GetPeople())
             {
                 Console.WriteLine($"{person.Id} - {person.FullName.PadRight(30,' ')} - {person.BirthDate.ToShortDateString()}");
@@ -19,7 +20,7 @@ namespace DDona.StrategyPattern.ConsoleApp
             Console.WriteLine("-------------------------------");
             Console.WriteLine();
 
-            personService.SetStrategy(new PeopleBirthDate(SortDirection.Desc));
+            personService.SetSortStrategy(new PeopleBirthDate(SortDirection.Desc));
             foreach (var person in personService.GetPeople())
             {
                 Console.WriteLine($"{person.Id} - {person.FullName.PadRight(30, ' ')} - {person.BirthDate.ToShortDateString()}");
