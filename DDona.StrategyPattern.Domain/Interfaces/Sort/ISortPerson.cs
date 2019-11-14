@@ -1,4 +1,5 @@
 ﻿using DDona.StrategyPattern.Domain.Entities;
+using DDona.StrategyPattern.Domain.Enum;
 using System;
 using System.Collections.Generic;
 using System.Text;

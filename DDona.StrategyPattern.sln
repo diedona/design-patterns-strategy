@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.StrategyPattern.Domai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.StrategyPattern.Services", "DDona.StrategyPattern.Services\DDona.StrategyPattern.Services.csproj", "{8BDA31C0-0B9A-449C-97C8-9B0A40170DC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDona.StrategyPattern.ConsoleApp", "DDona.StrategyPattern.ConsoleApp\DDona.StrategyPattern.ConsoleApp.csproj", "{A4F24E38-508B-4E56-9342-FC037B97F8B6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8BDA31C0-0B9A-449C-97C8-9B0A40170DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8BDA31C0-0B9A-449C-97C8-9B0A40170DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8BDA31C0-0B9A-449C-97C8-9B0A40170DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4F24E38-508B-4E56-9342-FC037B97F8B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4F24E38-508B-4E56-9342-FC037B97F8B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4F24E38-508B-4E56-9342-FC037B97F8B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4F24E38-508B-4E56-9342-FC037B97F8B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
