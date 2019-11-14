@@ -7,6 +7,6 @@ namespace DDona.StrategyPattern.Domain.Interfaces.Sort
 {
     public interface ISortPerson
     {
-        IList<Person> DoSort();
+        IList<Person> DoSort(IList<Person> people);
     }
 }
